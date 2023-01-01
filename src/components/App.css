@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+input {
+    padding: 12px 20px;
+    border: 1px solid rgb(5, 4, 4);
+    border-radius: 4px 0px 0px 4px;
+    border-right: none;
+    font-size: large;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    margin: 8px 0;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
