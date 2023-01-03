@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useActions } from '../hooks/useActions';
 import { useTypedSelector } from '../hooks/useTypeSelector';
 import './App.css';
+import { link } from 'fs';
 
 const RepositoriesList: React.FC = () => {
 
@@ -25,11 +26,14 @@ const RepositoriesList: React.FC = () => {
     }
 
     return (
-        <div>
+        <div >
             <form onSubmit={handleSubmit} className='container'>
                 <input type="text" name="repo" id="repo" value={term} onChange={handleChange} />
                 <button>Search</button>
             </form>
+            {error && <h3>{error}</h3>}
+            {loading && <h3>Loading ...</h3>}
+            {!error && !loading && data.map(name => <li key={name}>{name}</li>)}
         </div>
     )
 }
